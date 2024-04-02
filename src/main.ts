@@ -7,6 +7,6 @@ import router from './routes'
 const app = createApp(App) // 创建 Vue 应用实例
 
 app.use(ElementPlus) // 使用 ElementPlus 插件
-app.use(router)
+app.use(router) // 使用路由
 
 app.mount('#app') // 将根组件挂载到指定的 DOM 元素上

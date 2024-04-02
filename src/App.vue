@@ -1,13 +1,18 @@
 <template>
+  <HeaderCom/>
   <router-view></router-view>
+  <FooterCom/>
 </template>
 
 <script lang="ts">
+import HeaderCom from './components/HeaderCom.vue';
+import FooterCom from './components/FooterCom.vue';
 
 export default {
   name: 'App',
   components: {
-   
+    HeaderCom,
+    FooterCom,
   }
 };
 </script>
@@ -20,6 +25,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
