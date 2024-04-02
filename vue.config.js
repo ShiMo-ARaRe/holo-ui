@@ -30,6 +30,9 @@ Mixins 和继承：SCSS 提供了 Mixins 和继承的功能。Mixins 允许你�
 // 安装Element
 // npm install element-plus --save
 
+// 安装路由
+// npm install vue-router@next --save
+
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   // lintOnSave:false, //关闭语法检查
