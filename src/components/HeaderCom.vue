@@ -3,25 +3,26 @@
     <el-row>
       <el-col :span="24">
         <ul>
-          <li>
+          <li v-if="store.state.NickName == undefined" @click="OpenLogin">
             <!-- underline="false" 是用来控制链接文本是否显示下划线的属性。 -->
             <el-link :underline="false">登录</el-link>
           </li>
-          <li>
+          <li v-if="store.state.NickName == undefined" @click="OpenRegister">
             <el-link :underline="false">注册</el-link>
           </li>
-          <li>
-            <el-link :underline="false">aqua</el-link>
+          <li v-if="store.state.NickName != undefined"> 
+            <el-link :underline="false">{{store.state.NickName}}</el-link>
           </li>
-          <li>
+          <li v-if="store.state.NickName != undefined">
             <el-link :underline="false" href="/personcenter">个人中心</el-link>
           </li>
-          <li>
+          <li v-if="store.state.NickName != undefined" @click="LogOut">
             <el-link :underline="false">注销</el-link>
           </li>
         </ul>
       </el-col>
     </el-row>
+
 
     <el-row>
       <!-- 共24块，每个col占8块，相当于平分 -->
@@ -82,6 +83,9 @@
       </el-col>
       <!-- 创建一个具有水平导航菜单的网页布局，用于在网页中导航到不同的页面。每个菜单项都具有一个索引，点击不同的菜单项将导航到相应的页面。 -->
     </el-row>
+
+    <LoginCom />
+    <RegisterCom />
   </div>
 </template>
 
@@ -90,10 +94,27 @@ import { ElMessage } from "element-plus"; // 消息提示组件
 import { ref } from "vue"; // 响应式
 import { onMounted } from "vue"; // 挂载完毕后执行
 
+import LoginCom from "./LoginCom.vue";
+import RegisterCom from "./RegisterCom.vue";
+import { useStore } from 'vuex' // VueX 提供的辅助函数，用于在组件中获取存储实例（store）
+
+const store = useStore()
+const OpenLogin = () => {
+  store.commit('OpenLogin')
+}
+const OpenRegister = () => {
+  store.commit('OpenRegister')
+}
+const LogOut=()=>{
+  //清理vuex状态 //清理localStorage
+  localStorage.removeItem('NickName');
+  localStorage.removeItem('token');
+  store.commit('SettingNickName', undefined)
+}
+
 //属性
 const SearchInput = ref(""); // 默认搜索框为空
 const activeIndex = ref('/'); // 默认选中首页
-
 
 //方法
 const change = () => {
