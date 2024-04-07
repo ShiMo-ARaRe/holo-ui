@@ -1,13 +1,7 @@
 <template>
-  <div>LoveFlower</div>
+  <FlowerList :type=1 image="/images/theme/flower_bannerLove_190906.jpg" />
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
+<script setup> 
+import FlowerList from '../components/FlowerList.vue'
+</script> 

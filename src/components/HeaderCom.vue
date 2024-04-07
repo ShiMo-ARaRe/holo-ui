@@ -31,7 +31,7 @@
           <!-- 指定了图片的适应方式为 contain。这意味着图片将被缩放以适应容器，同时保持其原始比例，直到完全适应容器为止。 -->
           <el-image
             style="width: 200px; height: 100px"
-            src="/images/zhaoxi_logo.png"
+            src="/images/holo_logo.png"
             fit="contain"
           ></el-image>
         </el-link>
@@ -131,6 +131,7 @@ onMounted(() => {
 <style lang="scss">
 ul {
   list-style: none; //移除列表项前面的默认符号
+  margin-top: 5px;
   padding-left: 80%; //设置了列表项容器的左内边距为父容器宽度的 80%
   li {
     // 嵌套的规则，用于设置列表项（li）的样式

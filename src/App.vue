@@ -26,4 +26,8 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+*{ // 外边距，内边距全部清零
+  margin: 0;
+  padding: 0;
+}
 </style>

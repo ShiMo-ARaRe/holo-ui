@@ -25,11 +25,9 @@ const isShow = ref(false); // 挂载完毕前为false，即不展示轮播图
 
 onMounted(async () => {
   images.value = (await getBanners2()).data;
-  isShow.value = true;
+  isShow.value = true; // 这个的作用就是让数据获取完毕后重新渲染一次
 });
-
 </script>
-
 
 <style lang="scss">
 .el-carousel__container {

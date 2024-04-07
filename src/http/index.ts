@@ -22,15 +22,15 @@ export const getToken = (parms: {}) => { // 根据账号密码判断是否登录
     return axios.post(http.value + "/Login/Check", parms); 
 }
 
-// //生成一笔订单
-// export const CreateOrder = (parms: {}) => {
-//     //在header里携带token访问后端接口
-//     axios.defaults.headers.common['Authorization'] = "Bearer " + localStorage["token"];
-//     return axios.post(http.value + "/Order/CreateOrder", parms);
-// }
-// //获取订单列表
-// export const GetOrder = () => {
-//     //在header里携带token访问后端接口
-//     instance.defaults.headers.common['Authorization'] = "Bearer " + localStorage["token"];
-//     return instance.post(http.value + "/Order/GetOrder");
-// }
+//生成一笔订单
+export const CreateOrder = (parms: {}) => {
+    //在header里携带token访问后端接口
+    axios.defaults.headers.common['Authorization'] = "Bearer " + localStorage["token"];
+    return axios.post(http.value + "/Order/CreateOrder", parms);
+}
+//获取订单列表
+export const GetOrder = () => {
+    //在header里携带token访问后端接口
+    axios.defaults.headers.common['Authorization'] = "Bearer " + localStorage["token"];
+    return axios.post(http.value + "/Order/GetOrder");
+}

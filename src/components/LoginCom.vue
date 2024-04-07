@@ -71,8 +71,8 @@ const CloseLogin = () => { // 取消按钮绑定的方法
 };
 const form = ref(); // 表单提交的数据
 form.value = {
-  UserName: "张三",
-  Password: "123456",
+  UserName: "FFF",
+  Password: "111111",
   ValidateCode: "", // 验证码
 };
 const Submit = async () => {
