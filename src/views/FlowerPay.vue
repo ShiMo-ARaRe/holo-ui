@@ -46,7 +46,7 @@ const goToPay = async () => {
         message: '创建订单成功！',
         type: 'success', // 成功
       })
-      router.push({ path: '/' });
+      router.push({ path: '/personcenter' });
     } else {
       ElMessage.error("创建订单失败，请联系系统管理员！")
     }

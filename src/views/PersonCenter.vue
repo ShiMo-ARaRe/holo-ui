@@ -27,6 +27,8 @@ onMounted(async () => {
   list.value = (await GetOrder()).data.result
 })
 </script>
+
+
 <style lang="scss" scoped>
 .common-layout {
   padding-left: 0;

@@ -42,9 +42,23 @@ Mixins 和继承：SCSS 提供了 Mixins 和继承的功能。Mixins 允许你�
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   // lintOnSave:false, //关闭语法检查
-  
-  transpileDependencies: true
+
+  transpileDependencies: true,
   // 告诉 Vue.js 构建工具，在构建项目时将指定的依赖库进行转译（transpile）处理，
   // 以确保它们与项目中使用的现代 JavaScript 语法兼容。
+
+  // devServer: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://localhost:5018/api',
+  //       // 允许跨域
+  //       changeOrigin: true,
+  //       ws: true,
+  //       pathRewrite: {
+  //         '^/api': ''
+  //       }
+  //     }
+  //   }
+  // }
 
 })

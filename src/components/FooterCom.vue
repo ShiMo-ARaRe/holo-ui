@@ -4,32 +4,32 @@
       <!-- 尾部导航 -->
       <div class="ft-nav">
         <a href="/">首页</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">关于我们</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">媒体报道</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">企业团购</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">花店入驻</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">友情链接</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">在线补款</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">为什么选择朝夕鲜花网</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">关于我们</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">媒体报道</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">企业团购</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">花店入驻</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">友情链接</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">在线补款</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">为什么选择hololive</a>
       </div>
       <!-- 尾部导航 End -->
       <!-- 友情链接 -->
       <div class="ft-link">
         <span>友链</span>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">朝夕教育</a> 
-        <a href="https://ke.qq.com/" target="_blank">腾讯课堂</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">朝夕教育</a> 
-        <a href="https://ke.qq.com/" target="_blank">腾讯课堂</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">朝夕教育</a> 
-        <a href="https://ke.qq.com/" target="_blank">腾讯课堂</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">朝夕教育</a> 
-        <a href="https://ke.qq.com/" target="_blank">腾讯课堂</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">朝夕教育</a> 
-        <a href="https://ke.qq.com/" target="_blank">腾讯课堂</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">朝夕教育</a> 
-        <a href="https://ke.qq.com/" target="_blank">腾讯课堂</a>
-        <a href="https://www.zhaoxiedu.net/" target="_blank">朝夕教育</a> 
-        <a href="https://ke.qq.com/" target="_blank">腾讯课堂</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">直播日程</a> 
+        <a href="https://www.youtube.com/@AmamiyaKokoro" target="_blank">Youtube</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">直播日程</a> 
+        <a href="https://www.youtube.com/@AmamiyaKokoro" target="_blank">Youtube</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">直播日程</a> 
+        <a href="https://www.youtube.com/@AmamiyaKokoro" target="_blank">Youtube</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">直播日程</a> 
+        <a href="https://www.youtube.com/@AmamiyaKokoro" target="_blank">Youtube</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">直播日程</a> 
+        <a href="https://www.youtube.com/@AmamiyaKokoro" target="_blank">Youtube</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">直播日程</a> 
+        <a href="https://www.youtube.com/@AmamiyaKokoro" target="_blank">Youtube</a>
+        <a href="https://schedule.hololive.tv/" target="_blank">直播日程</a> 
+        <a href="https://www.youtube.com/@AmamiyaKokoro" target="_blank">Youtube</a>
       </div>
       <!-- 友情链接 End -->
     </div>

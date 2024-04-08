@@ -5,7 +5,9 @@ import { ref } from 'vue'
 
 //获取首页Banner轮播图
 const json = ref("/json") // public的json目录下
-const http = ref("http://localhost:5018/api")
+const http = ref("http://localhost:5018/api") // 没有配置代理服务器时的写法
+// const http = ref("/api") // 配置了代理服务器时的写法
+
 export const getBanners = () => {
     return axios.get(json.value + "/banner.json"); // 获取本地数据
 }
@@ -31,6 +33,7 @@ export const CreateOrder = (parms: {}) => {
 //获取订单列表
 export const GetOrder = () => {
     //在header里携带token访问后端接口
+    // console.log("##测试用##",http.value + "/Order/GetOrder"); // 测试用
     axios.defaults.headers.common['Authorization'] = "Bearer " + localStorage["token"];
     return axios.post(http.value + "/Order/GetOrder");
 }

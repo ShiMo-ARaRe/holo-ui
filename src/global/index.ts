@@ -1,5 +1,7 @@
 import { ref } from 'vue'
 const RequestUrl = ref("http://localhost:5018/api");  // 用于获取服务器数据
+// const RequestUrl = ref("/api");  // 用于获取服务器数据，配置了代理服务器的写法
+
 const RequestJson = ref("/json"); // 用于获取本地数据（public下的json目录
 
 const guid = () => {
