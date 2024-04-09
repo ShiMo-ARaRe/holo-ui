@@ -1,5 +1,5 @@
 <template>
-  <FlowerList :type=3  image="/images/theme/xianhuan_01_20210106.jpg" />
+  <FlowerList :type=3  image="/images/theme/GKooRy3aEAAyw1Q.jpg" />
 </template>
 
 <script setup> 

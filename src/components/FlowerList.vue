@@ -21,7 +21,8 @@
                 <span class="ico ico-effect"></span>
                 <h4>用途</h4>
               </div>
-              <ul class="item-list list-inline">
+              待开发1
+              <!-- <ul class="item-list list-inline">
                 <li>
                   <a href="/aiqingxianhua/">爱情鲜花</a>
                 </li>
@@ -64,7 +65,7 @@
                 <li>
                   <a href="/worldflora/">港澳台送花</a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
 
             <div class="item">
@@ -72,7 +73,8 @@
                 <span class="ico ico-texture"></span>
                 <h4>用途</h4>
               </div>
-              <ul class="item-list list-inline">
+              待开发2
+              <!-- <ul class="item-list list-inline">
                 <li>
                   <a href="/aiqingxianhua/">爱情鲜花</a>
                 </li>
@@ -115,7 +117,7 @@
                 <li>
                   <a href="/worldflora/">港澳台送花</a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
 
             <div class="item">
@@ -123,7 +125,8 @@
                 <span class="ico ico-color"></span>
                 <h4>用途</h4>
               </div>
-              <ul class="item-list list-inline">
+              待开发3
+              <!-- <ul class="item-list list-inline">
                 <li>
                   <a href="/aiqingxianhua/">爱情鲜花</a>
                 </li>
@@ -166,7 +169,7 @@
                 <li>
                   <a href="/worldflora/">港澳台送花</a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
 
             <div class="item">
@@ -174,7 +177,8 @@
                 <span class="ico ico-sort"></span>
                 <h4>用途</h4>
               </div>
-              <ul class="item-list list-inline">
+              待开发4
+              <!-- <ul class="item-list list-inline">
                 <li>
                   <a href="/aiqingxianhua/">爱情鲜花</a>
                 </li>
@@ -217,7 +221,7 @@
                 <li>
                   <a href="/worldflora/">港澳台送花</a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
 
             <div class="item">
@@ -225,7 +229,8 @@
                 <span class="ico ico-price"></span>
                 <h4>用途</h4>
               </div>
-              <ul class="item-list list-inline">
+              待开发5
+              <!-- <ul class="item-list list-inline">
                 <li>
                   <a href="/aiqingxianhua/">爱情鲜花</a>
                 </li>
@@ -268,7 +273,7 @@
                 <li>
                   <a href="/worldflora/">港澳台送花</a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
 
             <div class="item">
@@ -276,7 +281,8 @@
                 <span class="ico ico-num"></span>
                 <h4>用途</h4>
               </div>
-              <ul class="item-list list-inline">
+              待开发6
+              <!-- <ul class="item-list list-inline">
                 <li>
                   <a href="/aiqingxianhua/">爱情鲜花</a>
                 </li>
@@ -319,7 +325,7 @@
                 <li>
                   <a href="/worldflora/">港澳台送花</a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </el-aside>
@@ -328,7 +334,8 @@
         <el-main>
           <!-- display: inherit 让图像继承其父级元素的显示方式（块，行内，行内块） -->
           <el-image
-            style="display: inherit; width: 1048px; margin-top: -20px"
+            :fit="'cover'"
+            style="display: inherit; width: 1048px; height: 500px; margin-top: -20px"
             :src="image"
           ></el-image>
 
@@ -396,6 +403,7 @@ const GoToDetail = (currId: Number) => {
   .el-breadcrumb {
     margin-top: 20px;
   }
+
   .ico-flower,
   .ico-ysh,
   .ico-Plant,
@@ -414,6 +422,7 @@ const GoToDetail = (currId: Number) => {
     display: block;
     background-repeat: no-repeat;
   }
+
   .navigation {
     margin-bottom: 20px;
     padding: 0 9px;
@@ -482,7 +491,7 @@ const GoToDetail = (currId: Number) => {
       margin-bottom: 20px;
       padding: 10px;
       border: 1px solid transparent;
-      background-color: #fff;
+      background-color: #1b293a;
       .list-image {
         width: 240px;
         height: 255px;
@@ -509,8 +518,8 @@ const GoToDetail = (currId: Number) => {
           height: 36px;
           margin-bottom: 8px;
           text-align: justify;
-          a {
-            color: #737373;
+          .product-title {
+            color: #fff;
             text-decoration: none;
           }
         }

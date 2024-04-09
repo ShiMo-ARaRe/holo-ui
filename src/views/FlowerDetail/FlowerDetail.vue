@@ -3,10 +3,11 @@
     <section class="con">
       <el-container>
         <el-header>
+          <!--组件来自： https://element.eleme.cn/#/zh-CN/component/breadcrumb#breadcrumb-mian-bao-xie -->
           <el-breadcrumb separator="/">
             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
             <el-breadcrumb-item :to="{ path: path }">列表页</el-breadcrumb-item>
-            <el-breadcrumb-item>详情页</el-breadcrumb-item>
+            <el-breadcrumb-item class="Detail">详情页</el-breadcrumb-item>
           </el-breadcrumb>
         </el-header>
 
@@ -71,42 +72,42 @@
           <ul class="product-recommend">
             <li>
               <el-image src="/images/content/a1.jpg"></el-image>
-              <p>韩式系列/公主的假日</p>
+              <p>韩式系列</p>
               <p>￥239</p>
             </li>
             <li>
               <el-image src="/images/content/a2.jpg"></el-image>
-              <p>韩式系列/公主的假日</p>
+              <p>韩式系列</p>
               <p>￥239</p>
             </li>
             <li>
               <el-image src="/images/content/a3.jpg"></el-image>
-              <p>韩式系列/公主的假日</p>
+              <p>韩式系列</p>
               <p>￥239</p>
             </li>
             <li>
               <el-image src="/images/content/a4.jpg"></el-image>
-              <p>韩式系列/公主的假日</p>
+              <p>韩式系列</p>
               <p>￥239</p>
             </li>
             <li>
               <el-image src="/images/content/a5.jpg"></el-image>
-              <p>韩式系列/公主的假日</p>
+              <p>韩式系列</p>
               <p>￥239</p>
             </li>
             <li>
               <el-image src="/images/content/a6.jpg"></el-image>
-              <p>韩式系列/公主的假日</p>
+              <p>韩式系列</p>
               <p>￥239</p>
             </li>
             <li>
               <el-image src="/images/content/a7.jpg"></el-image>
-              <p>韩式系列/公主的假日</p>
+              <p>韩式系列</p>
               <p>￥239</p>
             </li>
             <li>
               <el-image src="/images/content/a8.jpg"></el-image>
-              <p>韩式系列/公主的假日</p>
+              <p>韩式系列</p>
               <p>￥239</p>
             </li>
           </ul>
@@ -115,18 +116,20 @@
         <el-main>
           <div class="product-content">
             <h3>商品详情</h3>
-            <el-image src="/images/detail/content/by_1.jpg"></el-image>
-            <el-image src="/images/detail/content/by_2.jpg"></el-image>
-            <el-image src="/images/detail/content/by_3.jpg"></el-image>
-            <el-image src="/images/detail/content/by_4.jpg"></el-image>
-            <el-image src="/images/detail/content/by_5.jpg"></el-image>
-            <el-image src="/images/detail/content/by_6.jpg"></el-image>
+            <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/67329317_p0_master1200.jpg"></el-image>
+            <!-- <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/by_3.jpg"></el-image>
+            <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/by_4.jpg"></el-image>
+            <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/by_5.jpg"></el-image>
+            <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/by_6.jpg"></el-image> -->
+            <el-image :fit="'cover'" style="width: 740px; height: 1500px;" src="/images/detail/content/58937599_p0.png"></el-image>
           </div>
         </el-main>
       </el-container>
     </section>
   </div>
 </template>
+
+
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
 import { getFlowers } from "../../http/index";
@@ -205,10 +208,15 @@ const goToPay = async () => {
   width: 1250px;
   margin: 15px auto 0;
 
+  .el-header{
+    height: 15px;
+  }
+
   .previewWrap {
     float: left;
     width: 400px;
     position: relative;
+    margin-top: 15px;
 
     .spec-preview {
       position: relative;
@@ -276,7 +284,6 @@ const goToPay = async () => {
   .InfoWrap {
     width: 800px;
     float: right;
-
     .product-info {
       padding-left: 0;
       margin-top: 0px;
@@ -289,9 +296,9 @@ const goToPay = async () => {
           display: inline-block;
           width: 80px;
           padding-left: 12px;
-          font-size: 13px;
+          font-size: 16px;
           line-height: 18px;
-          color: #71797f;
+          color: #387748;
           vertical-align: top;
         }
         .right {
@@ -299,7 +306,7 @@ const goToPay = async () => {
           width: 580px;
           font-size: 13px;
           line-height: 18px;
-          color: #232628;
+          color: #fff;
           vertical-align: top;
           text-align: justify;
           padding-right: 36px;

@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <el-row>
+  <div style="background-color: #232628;">
+
+    <el-row style="padding-top: 10px;">
       <el-col :span="24">
         <ul>
           <li v-if="store.state.NickName == undefined" @click="OpenLogin">
@@ -27,22 +28,23 @@
     <el-row>
       <!-- 共24块，每个col占8块，相当于平分 -->
       <el-col :span="8">
-        <el-link :underline="false" href="/">
+        <!-- <el-link :underline="false" href="/"> -->
           <!-- 指定了图片的适应方式为 contain。这意味着图片将被缩放以适应容器，同时保持其原始比例，直到完全适应容器为止。 -->
-          <el-image
+          <!-- <el-image
             style="width: 200px; height: 100px"
             src="/images/holo_logo.png"
             fit="contain"
-          ></el-image>
-        </el-link>
+          ></el-image> -->
+        <!-- </el-link> -->
       </el-col>
+      
       <el-col :span="8">
         <!-- 设置输入框的尺寸为大号,输入框中的占位符文本为 "商品搜索",在输入框的值发生变化时触发 change 事件-->
         <el-input
           v-model="SearchInput"
           class="w-50 m-2"
-          style="margin-top: 30px"
           size="large"
+          style="margin-top: 15px; margin-bottom: 5px;"
           placeholder="商品搜索"
           :suffix-icon="Search"
           @change="change"
@@ -50,8 +52,8 @@
         <!-- 将输入框的后缀图标设置为 Search。这里使用了动态绑定，:suffix-icon 的值会被解析为 Vue 实例中的 Search 变量的值。 -->
       </el-col>
       <el-col :span="8">
-        <div class="service-item">
-          <a id="header-chat" href="javascript:void(0);">
+        <div class="service-item" style="display: inline-block;">
+          <a  href="https://www.youtube.com/" target="_blank">
             <span class="icon icon-headset"></span>
             <span class="service-item-info">在线客服</span>
           </a>
@@ -61,13 +63,15 @@
 
     <el-row>
       <!-- 一个行（<el-row>）和一个列（<el-col>）。在列中，有一个水平导航菜单（<el-menu>)。
-         <el-col>具有一个属性:span="18"，表示该列占用父容器的宽度的18个网格单元。这意味着它将占用父容器宽度的18/24，即3/4。 -->
-      <el-col :span="18">
+         <el-col>具有一个属性:span="21"，表示该列占用父容器的宽度的21个网格单元。这意味着它将占用父容器宽度的21/24 -->
+      <el-col :span="21">
+        <!-- 组件来自：https://element.eleme.cn/#/zh-CN/component/menu#menu-group-attribute -->
         <el-menu
           :default-active="activeIndex"
           class="el-menu-header"
           mode="horizontal"
           router
+          style="background-color: #232628;"
         >
         <!-- :default-active="activeIndex"：这是一个动态绑定的属性，通过:前缀表示，将activeIndex变量的值绑定到default-active属性上。
           activeIndex是一个变量，用于指定默认选中的菜单项的索引。
@@ -75,10 +79,10 @@
           mode="horizontal"：这个属性用于设置菜单的模式。在这个例子中，菜单的模式被设置为水平模式，即菜单项水平排列。
           router：这个属性指示菜单将与Vue Router集成，以支持路由导航。当用户点击菜单项时，它将根据路由配置导航到相应的页面。 -->
           <el-menu-item index="/">首页</el-menu-item>
-          <el-menu-item index="/loveflower">爱情鲜花</el-menu-item>
-          <el-menu-item index="/birthdayflower">生日鲜花</el-menu-item>
-          <el-menu-item index="/friendflower">友情鲜花</el-menu-item>
-          <el-menu-item index="/weddingflower">婚庆鲜花</el-menu-item>
+          <el-menu-item index="/loveflower">列表一</el-menu-item>
+          <el-menu-item index="/birthdayflower">列表二</el-menu-item>
+          <el-menu-item index="/friendflower">列表三</el-menu-item>
+          <el-menu-item index="/weddingflower">列表四</el-menu-item>
         </el-menu>
       </el-col>
       <!-- 创建一个具有水平导航菜单的网页布局，用于在网页中导航到不同的页面。每个菜单项都具有一个索引，点击不同的菜单项将导航到相应的页面。 -->
@@ -131,25 +135,43 @@ onMounted(() => {
 <style lang="scss">
 ul {
   list-style: none; //移除列表项前面的默认符号
-  margin-top: 5px;
   padding-left: 80%; //设置了列表项容器的左内边距为父容器宽度的 80%
   li {
     // 嵌套的规则，用于设置列表项（li）的样式
     float: left; // 浮动
     margin-left: 20px;
+
+    .el-link{
+      color:white ;
+    }
   }
 }
+
+.w-50{
+  .el-input__wrapper,.is-focus{
+      background-color: #71797f !important;
+      border: 1px solid #71797f;
+      box-shadow: 0 0 5px rgba(113, 121, 127, 0.5);
+      .el-input__inner{
+        color: #fff;
+      }
+  }
+}
+
 .service-item {
   display: inline-block;
   font-size: 14px;
   color: #71797f;
   vertical-align: top;
-  line-height: 47px;
-  margin-top: 25px;
+  line-height: 46px;
+  margin-top: 15px;
   margin-left: -200px;
   a {
     text-decoration: none;
     color: inherit;
+    .service-item-info{
+      color: #c97272;
+    }
   }
   .icon-headset {
     background-position: -34px -102px;
@@ -168,6 +190,10 @@ ul {
   border-bottom: 0px !important; //设置.el-menu-header的下边框为0像素宽度，即隐藏下边框。
   .el-menu-item {
     width: 170px !important; //设置.el-menu-item的宽度为170像素。
+    color: #fff !important;
+  }
+  .el-menu-item:hover,.is-active{
+    background-color: #0f1320 !important;
   }
 }
 </style>

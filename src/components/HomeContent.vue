@@ -11,7 +11,7 @@
           </a>
           <h3>
             <a href="/loveflower">鲜花</a>
-            <span>送 · 让你怦然心动的人</span>
+            <!-- <span>送 · 让你怦然心动的人</span> -->
           </h3>
         </div>
       </el-header>
@@ -34,7 +34,7 @@
           <div class="fl-products">
             <div class="fl-products-item" v-for="item in list" :key="item">
               <a>
-                <div class="img-box">
+                <div class="img-box" style="background-color: #1b293a;">
                   <!-- object-fit: contain 指定了将图像调整为适应容器大小，同时保持其纵横比。
                   你可以根据需要选择不同的 object-fit 值，包括：
 
@@ -126,25 +126,28 @@ onMounted(async () => {
       margin-bottom: 16px;
       background-color: #fff;
       vertical-align: top;
-      .product-content {
-        padding: 10px 8px 14px;
-        text-align: center;
-        color: #232628;
-        .product-title {
-          max-width: 100%;
-          overflow: hidden;
-          -o-text-overflow: ellipsis;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          font-size: 16px;
-          line-height: 20px;
-        }
-        .product-price {
-          margin-top: 5px;
-          font-size: 16px;
-          font-weight: bold;
-          line-height: 20px;
-        }
+
+        .product-content {
+          padding: 10px 8px 14px;
+          text-align: center;
+          color: #fff;
+          background-color: #1b293a;
+
+          .product-title {
+            max-width: 100%;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+            line-height: 20px;
+          }
+          .product-price {
+            margin-top: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 20px;
+          }
       }
     }
   }
