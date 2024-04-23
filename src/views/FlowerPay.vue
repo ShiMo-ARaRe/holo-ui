@@ -63,5 +63,6 @@ const goToPay = async () => {
 <style lang="scss" scoped>
 .common-layout {
   padding-left: 0;
+  height: 550px;
 }
 </style>

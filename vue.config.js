@@ -47,6 +47,14 @@ module.exports = defineConfig({
   // 告诉 Vue.js 构建工具，在构建项目时将指定的依赖库进行转译（transpile）处理，
   // 以确保它们与项目中使用的现代 JavaScript 语法兼容。
 
+
+  devServer: {
+    // 默认情况下，Vue CLI 只允许本地的主机（localhost）访问开发服务器。
+    // 这是为了提供更好的安全性，防止潜在的恶意访问。然而，在某些情况下，你可能需要允许其他主机（比如局域网中的其他设备）访问你的开发服务器。
+    // 通过将 allowedHosts 设置为 "all"，你可以解除这个限制，允许任何主机进行访问。
+    allowedHosts: "all",
+  },
+
   // devServer: {
   //   proxy: {
   //     '/api': {

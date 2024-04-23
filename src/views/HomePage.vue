@@ -10,9 +10,10 @@
     <el-carousel-item v-for="item in images" :key="item">
       <h3>
         <!-- courseUrl是跳转链接， target="_blank"表示链接将在新的浏览器标签页中打开。 -->
+        <!-- :href="item.courseUrl" -->
+        <!-- 暂时不用跳转，因为不好测试 -->
         <a
-          :href="item.courseUrl"
-          target="_blank"
+          target="_self"
           style="display: inline-block; height: 100%; width: 2160px"
         >
           <!-- imageUrl是图片的本地路径 -->

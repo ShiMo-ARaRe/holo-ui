@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #232628;">
+  <div style="background-color: #232628; width: 100%;">
 
     <el-row style="padding-top: 10px;">
       <el-col :span="24">
@@ -53,7 +53,7 @@
       </el-col>
       <el-col :span="8">
         <div class="service-item" style="display: inline-block;">
-          <a  href="https://www.youtube.com/" target="_blank">
+          <a  href="https://space.bilibili.com/500974396" target="_blank">
             <span class="icon icon-headset"></span>
             <span class="service-item-info">在线客服</span>
           </a>
