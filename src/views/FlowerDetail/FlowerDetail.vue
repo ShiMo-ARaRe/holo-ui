@@ -67,7 +67,7 @@
       </el-container>
 
       <el-container>
-        <el-aside width="240px">
+        <el-aside width="170px">
           <h5 style="margin-top: 83px">热销推荐</h5>
           <ul class="product-recommend">
             <li>
@@ -116,12 +116,12 @@
         <el-main>
           <div class="product-content">
             <h3>商品详情</h3>
-            <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/67329317_p0_master1200.jpg"></el-image>
+            <el-image :fit="'cover'" style="width: 640px; height: 850px;" src="/images/detail/content/67329317_p0_master1200.jpg"></el-image>
             <!-- <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/by_3.jpg"></el-image>
             <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/by_4.jpg"></el-image>
             <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/by_5.jpg"></el-image>
             <el-image :fit="'cover'" style="width: 740px; height: 1000px;" src="/images/detail/content/by_6.jpg"></el-image> -->
-            <el-image :fit="'cover'" style="width: 740px; height: 1500px;" src="/images/detail/content/58937599_p0.png"></el-image>
+            <el-image :fit="'cover'" style="width: 640px; height: 1300px;" src="/images/detail/content/58937599_p0.png"></el-image>
           </div>
         </el-main>
       </el-container>
@@ -205,7 +205,7 @@ const goToPay = async () => {
 
 <style lang="scss" scoped>
 .con {
-  width: 1250px;
+  width: 1040px;
   margin: 15px auto 0;
 
   .el-header{
@@ -214,14 +214,14 @@ const goToPay = async () => {
 
   .previewWrap {
     float: left;
-    width: 400px;
+    width: 300px;
     position: relative;
     margin-top: 15px;
 
     .spec-preview {
       position: relative;
-      width: 400px;
-      height: 600px;
+      width: 300px;
+      height: 450px;
       border: 1px solid #ccc;
 
       img {
@@ -282,7 +282,7 @@ const goToPay = async () => {
   }
 
   .InfoWrap {
-    width: 800px;
+    width: 720px;
     float: right;
     .product-info {
       padding-left: 0;

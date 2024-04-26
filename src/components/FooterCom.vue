@@ -7,7 +7,7 @@
         <a href="https://schedule.hololive.tv/" target="_blank">关于我们</a>
         <a href="https://schedule.hololive.tv/" target="_blank">媒体报道</a>
         <a href="https://schedule.hololive.tv/" target="_blank">企业团购</a>
-        <a href="https://schedule.hololive.tv/" target="_blank">花店入驻</a>
+        <!-- <a href="https://schedule.hololive.tv/" target="_blank">花店入驻</a> -->
         <a href="https://schedule.hololive.tv/" target="_blank">友情链接</a>
         <a href="https://schedule.hololive.tv/" target="_blank">在线补款</a>
         <a href="https://schedule.hololive.tv/" target="_blank">为什么选择hololive</a>

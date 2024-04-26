@@ -26,7 +26,9 @@ export default {
   text-align: center;
   color: #fff;
   background-color: #1b293a;
+  min-width: 1510px; //临时的解决办法
 }
+
 *{ // 外边距，内边距全部清零
   margin: 0;
   padding: 0;

@@ -3,7 +3,7 @@
   <el-dialog
     v-model="IsShowRegister"
     title="注册"
-    width="30%"
+    width="480px"
     :before-close="handleClose"
   >
     <el-form :model="form" label-width="120px">

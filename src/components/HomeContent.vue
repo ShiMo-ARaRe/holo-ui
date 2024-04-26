@@ -10,7 +10,7 @@
             <span class="icon icon-arrow-right"></span>
           </a>
           <h3>
-            <a href="/loveflower">鲜花</a>
+            <a href="/loveflower">测试</a>
             <!-- <span>送 · 让你怦然心动的人</span> -->
           </h3>
         </div>
@@ -19,43 +19,39 @@
       <el-container>
         <!-- <el-aside> 标签是 Element UI 中的一个组件，用于创建一个侧边栏（Sidebar）的容器。
         它通常用于与主要内容区域进行布局，并提供额外的辅助信息、导航或工具。 -->
-        <el-aside width="400px">
+        <el-aside width="270px">
           <!-- 你的代码中，:fit="cover" 这部分可能出现了问题。在 Vue 中，如果你想传递一个字符串 'cover' 给 fit 属性，
           你需要在 'cover' 前后加上引号，像这样 :fit="'cover'"。
           否则，Vue 会把 cover 当作一个变量来处理，如果这个变量没有定义，就会出现问题。 -->
-          <el-image
-            style="height: 730px; margin-top: 20px"
-            :fit="'cover'"
-            src="/images/content/Amamya.jpg"
-          ></el-image>
+          <el-link @click="GoToDetail(1)">
+            <el-image
+              style="height: 530px; margin-top: 20px"
+              :fit="'cover'"
+              src="/images/content/Amamya.jpg"
+            ></el-image>
+          </el-link>
         </el-aside>
 
         <el-main>
-          <div class="fl-products">
-            <div class="fl-products-item" v-for="item in list" :key="item">
-              <a>
-                <div class="img-box" style="background-color: #1b293a;">
-                  <!-- object-fit: contain 指定了将图像调整为适应容器大小，同时保持其纵横比。
-                  你可以根据需要选择不同的 object-fit 值，包括：
-
-                    fill：拉伸图像以填充整个容器，可能导致图像变形。
-                    contain：将图像调整为适应容器大小，保持其纵横比，可能会在容器内留有空白区域。
-                    cover：将图像调整为填充容器大小，保持其纵横比，可能会超出容器范围。
-                    none：图像原始大小，可能会超出容器范围。
-                    scale-down：将图像调整为适应容器大小，但如果图像本身比容器小，则保持图像的原始大小。 -->
-                  <el-image
-                    style="width: 220px; height: 240px"
-                    :src="item.image"
-                  />
+          <!-- 原本这里放的是静态的 -->
+          <div class="grid-wrapper">
+            <div class="grid-item" v-for="item in list" :key="item">
+              <el-link @click="GoToDetail(item.id)">
+                <div class="grid-panel">
+                  <div class="img-box">
+                    <el-image class="list-image" :src="item.image"></el-image>
+                  </div>
+                  <div class="info-cont">
+                    <div class="price">
+                      <span class="price-sign">¥</span>
+                      <span class="price-num">{{ item.price }}</span>
+                    </div>
+                    <div class="title">
+                      <span class="product-title">{{ item.title }}</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="product-content">
-                  <p class="product-title">{{ item.title }}</p>
-                  <p class="product-price">
-                    <span class="price-sign">¥</span>
-                    <span class="price-num">{{ item.price }}</span>
-                  </p>
-                </div>
-              </a>
+              </el-link>
             </div>
           </div>
         </el-main>
@@ -67,6 +63,9 @@
 <script setup>
 import { getFlowers } from "../http/index";
 import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router"; //useRouter 是 Vue Router 提供的一个钩子函数，用于在组件中获取路由实例。
+const router = useRouter();
+
 const list = ref();
 
 onMounted(async () => {
@@ -76,12 +75,18 @@ onMounted(async () => {
   };
   list.value = (await getFlowers(parms)).data.result; // 数据套了一层ApiResult，所以要从result中拿数据
 });
+
+const GoToDetail = (currId) => {
+  const sss = ref();
+  sss.value = currId; // 商品id
+  router.push({ path: "/detail", query: { id: sss.value, type: 1 } });
+};
 </script>
 
 
 <style lang="scss" scoped>
 .con {
-  width: 1500px;
+  width: 1040px;
   margin: 15px auto 0;
 
   .common-layout {
@@ -101,7 +106,7 @@ onMounted(async () => {
     h3 {
       font-size: 26px;
       line-height: 30px;
-      color: #232628;
+      color:rgb(13, 131, 199);
       font-weight: bold;
       a {
         color: inherit;
@@ -127,27 +132,69 @@ onMounted(async () => {
       background-color: #fff;
       vertical-align: top;
 
-        .product-content {
-          padding: 10px 8px 14px;
-          text-align: center;
-          color: #fff;
-          background-color: #1b293a;
+      .product-content {
+        padding: 10px 8px 14px;
+        text-align: center;
+        color: #fff;
+        background-color: #1b293a;
 
+        .product-title {
+          max-width: 100%;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .product-price {
+          margin-top: 5px;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .grid-wrapper {
+    width: 730px;
+    .grid-item {
+      float: left;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid transparent;
+      background-color: #1b293a;
+      .list-image {
+        width: 160px;
+        height: 170px;
+      }
+      .info-cont {
+        .price {
+          text-align: initial;
+          margin-top: 10px;
+          margin-bottom: 8px;
+          color: #ff6a00;
+          .price-sign {
+            font-family: arial;
+          }
+          .price-num {
+            font-weight: 700;
+            line-height: 18px;
+            margin-right: 10px;
+          }
+        }
+        .title {
+          font-size: 12px;
+          line-height: 18px;
+          overflow: hidden;
+          height: 36px;
+          margin-bottom: 8px;
+          text-align: justify;
           .product-title {
-            max-width: 100%;
-            overflow: hidden;
-            -o-text-overflow: ellipsis;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 16px;
-            line-height: 20px;
+            color: #fff;
+            text-decoration: none;
           }
-          .product-price {
-            margin-top: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 20px;
-          }
+        }
       }
     }
   }

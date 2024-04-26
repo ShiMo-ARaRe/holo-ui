@@ -3,7 +3,7 @@
   <el-dialog
     v-model="IsShowLogin"
     title="登录"
-    width="30%"
+    width="480px"  
     :before-close="handleClose"
   >
     <el-form :model="form" label-width="120px">

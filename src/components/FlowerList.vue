@@ -335,7 +335,7 @@
           <!-- display: inherit 让图像继承其父级元素的显示方式（块，行内，行内块） -->
           <el-image
             :fit="'cover'"
-            style="display: inherit; width: 1048px; height: 500px; margin-top: -20px"
+            style="display: inherit; width: 730px; height: 300px; margin-top: -20px"
             :src="image"
           ></el-image>
 
@@ -397,7 +397,7 @@ const GoToDetail = (currId: Number) => {
 
 <style lang="scss" scoped>
 .con {
-  width: 1500px;
+  width: 1040px;
   margin: 15px auto 0;
 
   .el-breadcrumb {
@@ -485,7 +485,7 @@ const GoToDetail = (currId: Number) => {
     }
   }
   .grid-wrapper {
-    width: 1048px;
+    width: 730px;
     .grid-item {
       float: left;
       margin-bottom: 20px;
@@ -493,8 +493,8 @@ const GoToDetail = (currId: Number) => {
       border: 1px solid transparent;
       background-color: #1b293a;
       .list-image {
-        width: 240px;
-        height: 255px;
+        width: 160px;
+        height: 170px;
       }
       .info-cont {
         .price {

@@ -2,7 +2,7 @@
   <!-- 轮播图 -->
   <!-- 组件来自于 https://element.eleme.cn/#/zh-CN/component/carousel#carousel-methods -->
   <el-carousel
-    height="580px"
+    height="300px"
     direction="vertical"
     interval="2000"
     v-if="isShow"
@@ -14,7 +14,7 @@
         <!-- 暂时不用跳转，因为不好测试 -->
         <a
           target="_self"
-          style="display: inline-block; height: 100%; width: 2160px"
+          style="display: inline-block; height: 100%; width: 1020px"
         >
           <!-- imageUrl是图片的本地路径 -->
           <img

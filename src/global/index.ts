@@ -1,6 +1,7 @@
 import { ref } from 'vue'
 // const RequestUrl = ref("http://571ngwj57105.vicp.fun:56266/api") // 公网写法
-const RequestUrl = ref("http://localhost:5018/api");  // 用于获取服务器数据 内网
+// const RequestUrl = ref("http://localhost:5018/api");  // 用于获取服务器数据 内网
+const RequestUrl = ref("http://192.168.106.132/api") // linux部署的写法。为什么不写端口呢？因为nginx里面配置了，当路径是/api时，转发到对应端口
 // const RequestUrl = ref("/api");  // 用于获取服务器数据，配置了代理服务器的写法
 
 const RequestJson = ref("/json"); // 用于获取本地数据（public下的json目录
