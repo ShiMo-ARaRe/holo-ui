@@ -7,7 +7,7 @@ import { ref } from 'vue'
 const json = ref("/json") // public的json目录下
 // const http = ref("http://571ngwj57105.vicp.fun:56266/api") // 公网写法
 // const http = ref("http://localhost:5018/api") // 没有配置代理服务器时的写法 内网
-const http = ref("http://192.168.106.132/api") // linux部署的写法。为什么不写端口呢？因为nginx里面配置了，当路径是/api时，转发到对应端口
+const http = ref("http://120.76.99.240/api") // linux部署的写法。为什么不写端口呢？因为nginx里面配置了，当路径是/api时，转发到对应端口
 // const http = ref("/api") // 配置了代理服务器时的写法
 
 export const getBanners = () => {
