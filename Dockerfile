@@ -10,18 +10,17 @@ WORKDIR /app
 COPY . .
 
 # 设置阿里云npm镜像
-RUN npm config set registry https://registry.npmmirror.com
-
-# 使用阿里云的npm镜像下载包
-RUN npm install -g npm --registry=https://npm.aliyun.com
+#RUN npm config set registry https://registry.npmmirror.com
 
 
 # 安装依赖
-RUN npm install
+#RUN npm install
+#既然在 VScode 中打包好了的话，那依赖也不用安装了！
 
 
 # 打包 - 目的：丢到nginx下跑
-RUN npm run build
+#RUN npm run build
+# 我们不在这打包，我们直接在外面（VScode）打包，然后把 dist目录 拷贝到容器中就行了，免得出错
 
 
 # nginx镜像
